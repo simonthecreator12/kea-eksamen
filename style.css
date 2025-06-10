@@ -1,0 +1,232 @@
+/* Font links 
+https://fonts.google.com/specimen/Roboto+Mono?query=roboto+mono
+https://fonts.google.com/specimen/Work+Sans?query=Work+San
+*/
+
+/* Font import
+<weight>: Use a value from 100 to 900
+.archivo {
+  font-family: "Archivo", sans-serif;
+  font-weight: 0;
+  font-style: normal;
+}
+
+<weight>: Use a value from 100 to 700
+.roboto-mono {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 0;
+  font-style: normal;
+}
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+}
+.overskrift {
+  font-family: "Archivo", sans-serif;
+  font-weight: 0;
+  font-style: normal;
+}
+
+.brødtekst {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 0;
+  font-style: normal;
+}
+
+/* Skrifttype definitioner - Overskrift font */
+h1,
+h2,
+h3 {
+  font-family: "Archivo", sans-serif;
+  font-weight: 0;
+  font-style: normal;
+}
+
+/* Skrifttype definitioner - Brødtekst font */
+p {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 0;
+  font-style: normal;
+}
+
+main {
+  display: flexbox;
+  justify-items: center;
+}
+
+.main_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80dvh;
+}
+
+.main_wrapper h1 {
+  color: black;
+  font-size: 12rem;
+}
+
+.main_wrapper h2 {
+  font-size: 3rem;
+  color: orange;
+}
+
+.seperator {
+  width: 80%;
+  border-radius: 5px;
+  background-color: #212121;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+
+  color: white;
+}
+
+.seperator h1 {
+  font-size: 15vh;
+}
+.seperator h2 {
+  font-size: 3vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 40vw 1fr; /* Venstre fixed, højre fylder ind */
+  gap: 20px;
+}
+
+.box1 {
+  padding: 15px;
+}
+
+.box2 {
+  display: flex;
+  padding: 15px;
+  justify-content: flex-end;
+}
+
+.box1 h1 {
+  font-size: 3vw;
+}
+
+.box2 img,
+.box2 video {
+  width: 25vw;
+  object-fit: contain;
+}
+
+.wrapper {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.grid_about {
+  display: grid;
+  grid-template-columns: 700px 1fr+100px;
+  grid-template-rows: 1fr;
+  justify-items: center;
+}
+
+.footer_bar{
+  margin-top: 150px;
+  width: auto;
+  height: 200px;
+  background-color: #212121;
+}
+
+.animated_box{
+  height: 350px;
+  width: 350px;
+  background-color: aqua;
+}
+
+.anim{
+  animation-name: animation1;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  transition-timing-function: cubic-bezier(0,.66,.99,.37);
+}
+
+.seperator:hover h1{
+  color: orange;
+}
+
+@keyframes animation1 {
+  0%   {background-color:red;rotate: 0deg;}
+  25%  {background-color:yellow;}
+  50%  {background-color:blue; border-radius: 100%;scale: 50%;rotate: 180deg;}
+  75%  {background-color:green;}
+  100% {background-color:red;rotate: 359deg;}
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    display: flex;
+    justify-content: center;  /* corrected */
+    align-items: center;
+    flex-direction: column;
+  }
+  .main_wrapper h1{
+    /* font-size: 4.5rem; */
+    font-size: 15dvw;
+  }
+  .main_wrapper h2{
+    /* font-size: 1.5rem; */
+    font-size: 5dvw;
+
+  }
+  .seperator {
+    width: 95vw;  /* fixed from 50dvw */
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 2px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .box2 {
+    display: flex;
+    padding: 3px;
+    justify-content: center;
+    margin: 0 auto; /* add this */
+  }
+
+  .box2 img,
+  .box2 video {
+    width: 95%;
+    object-fit: contain;
+  }
+
+.box1 h1 {
+  font-size: 6vw;
+}
+.box1 h2, h3 {
+  font-size: 4vw;
+}
+
+footer{
+  display: none;
+}
+
+.animated_box{
+  height: 300px;
+  width: 300px;
+  background-color: aqua;
+}
+
+}
