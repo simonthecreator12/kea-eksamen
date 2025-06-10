@@ -27,7 +27,7 @@ https://fonts.google.com/specimen/Work+Sans?query=Work+San
 }
 
 body{
-  height: 100vh;
+  height: 100%;
 }
 .overskrift {
   font-family: "Archivo", sans-serif;
@@ -228,5 +228,4 @@ footer{
   width: 300px;
   background-color: aqua;
 }
-
 }

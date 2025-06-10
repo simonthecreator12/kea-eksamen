@@ -27,13 +27,14 @@ https://fonts.google.com/specimen/Work+Sans?query=Work+San
 }
 
 header {
-  position:static;
+  position:sticky;
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   background-color: #212121;
+  z-index: 9999;   /* Ligger menuen helt forrest så den ikke bliver overwritet af noget andet på skærmen*/
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
