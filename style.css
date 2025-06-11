@@ -28,6 +28,7 @@ https://fonts.google.com/specimen/Work+Sans?query=Work+San
 
 body{
   height: 100%;
+  background-color: white;
 }
 .overskrift {
   font-family: "Archivo", sans-serif;
@@ -80,6 +81,34 @@ main {
 .main_wrapper h2 {
   font-size: 3rem;
   color: orange;
+}
+
+.frontpage_beskrivelse{
+  margin-top: 10px;
+  width: 45vw;
+  font-size: 0.8vw;
+}
+
+.front_anim_container{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 50px;
+  animation: sway 1.5s ease-in-out infinite;
+}
+
+.front_anim_container a {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+  animation: sway 1.5s ease-in-out infinite;
+}
+
+.front_anim_container a:hover{
+  color: orange;
+
 }
 
 .seperator {
@@ -162,12 +191,42 @@ main {
   color: orange;
 }
 
+button {
+  margin-top: 20px;
+  align-items: center;
+  transition-duration: 0.4s;
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
+  padding: 5px;
+    text-decoration: none;
+}
+
+button:hover {
+  background-color: orange;
+  color: white;
+  transform: translateY(-1px);
+}
+
+footer{
+  display: none;
+}
+
 @keyframes animation1 {
   0%   {background-color:red;rotate: 0deg;}
   25%  {background-color:yellow;}
   50%  {background-color:blue; border-radius: 100%;scale: 50%;rotate: 180deg;}
   75%  {background-color:green;}
   100% {background-color:red;rotate: 359deg;}
+}
+
+
+@keyframes sway {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -184,8 +243,12 @@ main {
   .main_wrapper h2{
     /* font-size: 1.5rem; */
     font-size: 5dvw;
-
   }
+.frontpage_beskrivelse{
+  width: 80vw;
+  font-size: 2.1vw;
+}
+
   .seperator {
     width: 95vw;  /* fixed from 50dvw */
     border-radius: 5px;
